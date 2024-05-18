@@ -1,0 +1,18 @@
+trigger:
+  branches:
+    exclude:
+      - "*"
+
+pr:
+  branches:
+    include:
+      - "*"
+
+jobs:
+- job: Build
+  displayName: 'Build job'
+  pool:
+    name: "Default"
+  steps:
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
